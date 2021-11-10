@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Rock Paper Scissors</title>
+<script>
+function choice(){
+	
+	var choice = document.getElementById("choice").value.toLowerCase();
+	
+	if (choice == "rock" || choice == "paper" || choice =="scissors"){
+		window.location.href = "playagame?choice=" + choice;
+		return;
+	}
+	
+	alert("You did not choose rock, paper, or scissors!");
+	
+}
+
+
+
+
+</script>
+
+
+
+
+<style>
+body{display: flex;
+justify-content: center;}
+
+#wrapper {display:flex;
+flex-flow: column wrap;
+align-items: center;
+font-size: 150%;
+background-color:#add8e6; 
+border: solid black 1px;
+padding: 10px;}
+
+#game {
+display: flex;
+flex-flow: column wrap;
+
+align-items:center;}
+
+
+</style>
+</head>
+<body>
+<div id="wrapper">
+<h1> Welcome to Rock, Paper, or Scissors!</h1>
+<p> Choose Rock, Paper, or Scissors</p>
+
+<div id="game">
+<label for="choice"> Enter your choice here!</label>
+<input type="text"  id="choice"> <br>
+<button id="button" onclick="choice();"> Play the game! </button>
+
+</div>
+</div>
+
+</body>
+</html>   
